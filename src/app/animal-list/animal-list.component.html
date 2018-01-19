@@ -1,5 +1,5 @@
 <div class="button-menu">
-  <button  class="btn" type="button" name="button">Click to add new Animal to List</button>
+  <button  (click)="addClicked()" class="btn" type="button" name="button">{{childShowAdd ? "Click to Hide Add Menu" : "Click to add new Animal to List"}}</button>
   <label for="option-menu">Filter Results:</label>
   <select name="option-menu" (change)="onChange($event.target.value)">
     <option selected="selected" value="allAnimals">All Animals</option>
@@ -24,8 +24,9 @@
       <th>Likes</th>
       <th>Dislikes</th>
       <th>Edit?</th>
+      <th>Delete Listing?</th>
     </tr>
-    <tr *ngFor="let currentAnimal of childAnimalList | filter: filterByFullList">
+    <tr *ngFor="let currentAnimal of childAnimalList | filter: filterByFullList; let i = index">
       <td>{{currentAnimal.name}}</td>
       <td>{{currentAnimal.species}}</td>
       <td>{{currentAnimal.age}}</td>
@@ -36,19 +37,7 @@
       <td>{{currentAnimal.likes}}</td>
       <td>{{currentAnimal.dislikes}}</td>
       <td><button (click)="editAnimalClick(currentAnimal)" class="btn" type="button" name="button">Click to Edit Animal</button></td>
+      <td class="remove"><button (click)="deleteAnimalClicked(i)" class="btn"type=" button" name="button">X</button></td>
     </tr>
   </table>
-  <!-- <div >
-    <h2>{{currentAnimal.name}} - {{currentAnimal.species}}</h2>
-    <button (click)="editAnimalClick(currentAnimal)" class="btn btn-danger" type="button" name="button">Click to Edit Animal</button>
-    <ul>
-      <li><strong>Age:</strong> {{currentAnimal.age}}</li>
-      <li><strong>Diet:</strong> {{currentAnimal.diet}}</li>
-      <li><strong>Location:</strong> {{currentAnimal.location}}</li>
-      <li><strong>Caretakers on Duty:</strong> {{currentAnimal.caretakers}}</li>
-      <li><strong>Gender:</strong> {{currentAnimal.sex}}</li>
-      <li><strong>Likes: </strong>{{currentAnimal.likes}}</li>
-      <li><strong>Dislikes:</strong> {{currentAnimal.dislikes}}</li>
-    </ul>
-  </div> -->
 </div>

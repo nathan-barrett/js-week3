@@ -18,10 +18,6 @@
   background: #FF6978;
   color: white;
 }
-
-
-
-
 table#animal-table {
   width: 100%;
   border-collapse: collapse;
@@ -40,6 +36,9 @@ th, td {
   padding: 10px;
 }
 th {
+  text-align: center;
+}
+td:last-child {
   text-align: center;
 }
 

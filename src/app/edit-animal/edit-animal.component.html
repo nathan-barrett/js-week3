@@ -6,40 +6,12 @@
       <input class="form-control" [(ngModel)]="childSelectedAnimal.name">
     </div>
     <div class="col">
-      <label>Enter Animal Species:</label>
-      <input class="form-control" [(ngModel)]="childSelectedAnimal.species">
-    </div>
-    <div class="col">
       <label>Enter Animal Age:</label>
-      <input class="form-control" [(ngModel)]="childSelectedAnimal.age">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <label>Enter Animal Species:</label>
-      <input class="form-control" [(ngModel)]="childSelectedAnimal.diet">
-    </div>
-    <div class="col">
-      <label>Enter Animal Location:</label>
-      <input class="form-control" [(ngModel)]="childSelectedAnimal.location">
+      <input type="number" class="form-control" [(ngModel)]="childSelectedAnimal.age">
     </div>
     <div class="col">
       <label>Enter Animal Caretakers:</label>
       <input type="number" class="form-control" [(ngModel)]="childSelectedAnimal.caretakers">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <label>Enter Animal Sex:</label>
-      <input class="form-control" [(ngModel)]="childSelectedAnimal.sex">
-    </div>
-    <div class="col">
-      <label>Enter Animal Likes:</label>
-      <input class="form-control" [(ngModel)]="childSelectedAnimal.likes">
-    </div>
-    <div class="col">
-      <label>Enter Animal Dislikes:</label>
-      <input type="number" class="form-control" [(ngModel)]="childSelectedAnimal.dislikes">
     </div>
   </div>
   <button class="btn btn-info" type="button" name="button" (click)="finishedEditingClicked()">Done Editing</button>

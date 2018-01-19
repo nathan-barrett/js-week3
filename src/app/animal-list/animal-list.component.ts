@@ -8,7 +8,10 @@ import { Animal } from '../animal.model'
 })
 export class AnimalListComponent implements OnInit {
   @Input() childAnimalList: Animal[];
+  @Input() childShowAdd: boolean;
   @Output() editSender = new EventEmitter();
+  @Output() showAddSender = new EventEmitter();
+  @Output() deleteSender = new EventEmitter();
 
   editAnimalClick(animalToEdit: Animal) {
     this.editSender.emit(animalToEdit);
@@ -20,9 +23,12 @@ export class AnimalListComponent implements OnInit {
     this.filterByFullList = optionFromMenu;
   }
 
-
-
-
+  addClicked() {
+    this.showAddSender.emit();
+  }
+  deleteAnimalClicked(animalToDelete: Animal) {
+    this.deleteSender.emit(animalToDelete);
+  }
   constructor() { }
 
   ngOnInit() {

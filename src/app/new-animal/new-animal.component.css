@@ -1,0 +1,17 @@
+section.new-animal {
+  margin-top: 20px;
+}
+h2 {
+  padding: 30px 0;
+}
+
+
+div.form-button {
+  display: flex;
+  justify-content: center;
+}
+div.form-button button {
+  margin-top: 15px;
+  background: #FF6978;
+  color: white;
+}
