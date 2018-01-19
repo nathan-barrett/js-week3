@@ -3,8 +3,12 @@ section.new-animal {
 }
 h2 {
   padding: 30px 0;
+  color: white;
+  text-shadow: 2px 2px 10px black;
 }
-
+label {
+  font-weight: bold;
+}
 
 div.form-button {
   display: flex;

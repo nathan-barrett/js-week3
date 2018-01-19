@@ -13,6 +13,7 @@
 .button-menu label {
   margin-bottom: 0;
   align-self: center;
+  font-weight: bold;
 }
 .button-menu option, select {
   background: #FF6978;

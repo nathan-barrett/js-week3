@@ -19,12 +19,12 @@
       <th>Age</th>
       <th>Diet</th>
       <th>Location</th>
-      <th>Number of Caretakers</th>
+      <th>Caretakers</th>
       <th>Gender</th>
       <th>Likes</th>
       <th>Dislikes</th>
       <th>Edit?</th>
-      <th>Delete Listing?</th>
+      <th>Delete?</th>
     </tr>
     <tr *ngFor="let currentAnimal of childAnimalList | filter: filterByFullList; let i = index">
       <td>{{currentAnimal.name}}</td>

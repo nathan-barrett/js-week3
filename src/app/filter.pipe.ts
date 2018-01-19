@@ -44,7 +44,7 @@ export class FilterPipe implements PipeTransform {
       return output;
     } else if(filteredList === "onlyMeat") {
       for (let i = 0; i < input.length; i++) {
-        if (input[i].diet === "Carnivore") {
+        if (input[i].diet === "Carnivore" || input[i].diet === "Omnivore") {
           output.push(input[i]);
         }
       }
