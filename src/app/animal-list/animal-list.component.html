@@ -1,14 +1,44 @@
-<select (change)="onChange($event.target.value)">
-  <option selected="selected" value="allAnimals">All Animals</option>
-  <option value="youngerAnimals">Young Animals</option>
-  <option value="olderAnimals">Old Aimals</option>
-  <option value="onlyMale">Male Animals</option>
-  <option value="onlyFemale">Female Animals</option>
-  <option value="onlyPlants">Vegetarians</option>
-  <option value="onlyMeat">Carnivores</option>
-</select>  
-<div class="row inventory">
-  <div *ngFor="let currentAnimal of childAnimalList | filter: filterByFullList" class="col-md-6">
+<div class="button-menu">
+  <button  class="btn" type="button" name="button">Click to add new Animal to List</button>
+  <label for="option-menu">Filter Results:</label>
+  <select name="option-menu" (change)="onChange($event.target.value)">
+    <option selected="selected" value="allAnimals">All Animals</option>
+    <option value="youngerAnimals">Young Animals</option>
+    <option value="olderAnimals">Old Aimals</option>
+    <option value="onlyMale">Male Animals</option>
+    <option value="onlyFemale">Female Animals</option>
+    <option value="onlyPlants">Vegetarians</option>
+    <option value="onlyMeat">Carnivores</option>
+  </select>
+</div>
+<div class="inventory">
+  <table id="animal-table">
+    <tr>
+      <th>Name</th>
+      <th>Species</th>
+      <th>Age</th>
+      <th>Diet</th>
+      <th>Location</th>
+      <th>Number of Caretakers</th>
+      <th>Gender</th>
+      <th>Likes</th>
+      <th>Dislikes</th>
+      <th>Edit?</th>
+    </tr>
+    <tr *ngFor="let currentAnimal of childAnimalList | filter: filterByFullList">
+      <td>{{currentAnimal.name}}</td>
+      <td>{{currentAnimal.species}}</td>
+      <td>{{currentAnimal.age}}</td>
+      <td>{{currentAnimal.diet}}</td>
+      <td>{{currentAnimal.location}}</td>
+      <td class="text-center">{{currentAnimal.caretakers}}</td>
+      <td>{{currentAnimal.sex}}</td>
+      <td>{{currentAnimal.likes}}</td>
+      <td>{{currentAnimal.dislikes}}</td>
+      <td><button (click)="editAnimalClick(currentAnimal)" class="btn" type="button" name="button">Click to Edit Animal</button></td>
+    </tr>
+  </table>
+  <!-- <div >
     <h2>{{currentAnimal.name}} - {{currentAnimal.species}}</h2>
     <button (click)="editAnimalClick(currentAnimal)" class="btn btn-danger" type="button" name="button">Click to Edit Animal</button>
     <ul>
@@ -20,5 +50,5 @@
       <li><strong>Likes: </strong>{{currentAnimal.likes}}</li>
       <li><strong>Dislikes:</strong> {{currentAnimal.dislikes}}</li>
     </ul>
-  </div>
+  </div> -->
 </div>

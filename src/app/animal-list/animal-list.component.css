@@ -1,0 +1,53 @@
+.button-menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.button-menu * {
+  margin-right: 20px;
+}
+.btn {
+  background: #FF6978;
+  color: white;
+}
+.button-menu label {
+  margin-bottom: 0;
+  align-self: center;
+}
+.button-menu option, select {
+  background: #FF6978;
+  color: white;
+}
+
+
+
+
+table#animal-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black
+}
+th:first-child {
+  text-align: left;
+}
+tr:nth-child(odd) {
+  background: #B1EDE8;
+}
+tr:nth-child(even) {
+  background: #FDF0D5;
+}
+th, td {
+  padding: 10px;
+}
+th {
+  text-align: center;
+}
+
+
+
+
+/*beige: #FDF0D5;
+
+blue: #B1EDE8;
+
+Salmon: #FF6978;*/

@@ -5,5 +5,4 @@
   <app-edit-animal [childSelectedAnimal]="selectedAnimal" (finishEditingSender)="finishedEditing($event)"></app-edit-animal>
   <app-animal-list (editSender)="editAnimal($event)" [childAnimalList]="masterAnimalList"></app-animal-list>
   <app-new-animal (newAnimalSender)='addAnimal($event)'></app-new-animal>
-
 </div>
