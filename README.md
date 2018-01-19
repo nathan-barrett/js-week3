@@ -2,10 +2,10 @@
 
 #### _Angular Application: Solo project to make a zoo database.
 
-#### By _**Nathan Barrett**_
+#### By **Nathan Barrett**
 
-## Description
-_An app to help a local zoo replace it's very extensive animal database.
+# Description
+An app to help a local zoo replace it's very extensive animal database.
 
 # Setup/Installation Requirements
    * Node is installed on your machine globally
@@ -22,11 +22,37 @@ _An app to help a local zoo replace it's very extensive animal database.
 
     3. If needed, ready for production by running command $ ng build
 
-    ## Specifications
+## Specifications
 
-    | Spec | Example Input | Example Output  |
-    | ------------- |:-------------:| -----:|
-    | Users should be able to add newly-admitted animals to the app via a form that includes fields for species, name, age, diet, location, caretakers needed, sex, one like and one dislike.  |   Species: "Arctic Fox", Name: "Moon", Age: 2, Diet: "Carnivore", Location: "Northern Trail", Caretakers: 5, Sex: "Female", Likes: "Cool shade", Dislikes: "Loud noises"  | Store all information in database |
-    | Users should be able to view a list of animals logged.     |   Moon, Caramel and Lily information      | Display info. about each animal back to user     |   Users should be able to view all animals, only young animals under 2, and only mature animals that are 2 or older. |
-    | User should be able to click on an animal to edit its name, age or caretakers.| | |
-    | User should option to view all animals, or filter by age| | |
+| Spec | Example Input | Example Output  |
+| ------------- |:-------------:| -----:|
+| Users should be able to add newly-admitted animals to the app via a form that includes fields for species, name, age, diet, location, caretakers needed, sex, one like and one dislike.  |   Species: "Arctic Fox", Name: "Moon", Age: 2, Diet: "Carnivore", Location: "Northern Trail", Caretakers: 5, Sex: "Female", Likes: "Cool shade", Dislikes: "Loud noises"  | Store all information in database |
+| Users should be able to view a list of animals logged.     |   Moon, Caramel and Lily information      | Display info. about each animal back to user     |   
+| User should be able to click on an animal to edit its name, age or caretakers.| | |
+| User should option to view all animals, or filter by age| | | |
+
+
+## Known Bugs
+
+_None at this time._
+
+
+## Support and contact details
+
+Please feel free to reach out with any questions, etc. to nathan-barrett on GitHub
+
+
+## Technologies Used
+
+* ES6 (JavaScript)
+* Node.js
+* Angular 2
+  - Command Line Interface
+* Bootstrap (CSS, JavaScript)
+
+
+### License
+
+*Developed under the MIT license.*
+
+Copyright (c) 2017 **_Nathan Barrett_**

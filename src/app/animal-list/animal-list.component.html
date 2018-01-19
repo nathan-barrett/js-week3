@@ -1,0 +1,14 @@
+<div class="row inventory">
+  <div *ngFor="let currentAnimal of childAnimalList" class="col-md-6">
+    <h2>{{currentAnimal.name}} - {{currentAnimal.species}}</h2>
+    <ul>
+      <li>{{currentAnimal.age}}</li>
+      <li>{{currentAnimal.diet}}</li>
+      <li>{{currentAnimal.location}}</li>
+      <li>{{currentAnimal.caretakers}}</li>
+      <li>{{currentAnimal.sex}}</li>
+      <li>{{currentAnimal.likes}}</li>
+      <li>{{currentAnimal.dislikes}}</li>
+    </ul>
+  </div>
+</div>
