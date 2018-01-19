@@ -1,14 +1,24 @@
+<select (change)="onChange($event.target.value)">
+  <option selected="selected" value="allAnimals">All Animals</option>
+  <option value="youngerAnimals">Young Animals</option>
+  <option value="olderAnimals">Old Aimals</option>
+  <option value="onlyMale">Male Animals</option>
+  <option value="onlyFemale">Female Animals</option>
+  <option value="onlyPlants">Vegetarians</option>
+  <option value="onlyMeat">Carnivores</option>
+</select>  
 <div class="row inventory">
-  <div *ngFor="let currentAnimal of childAnimalList" class="col-md-6">
+  <div *ngFor="let currentAnimal of childAnimalList | filter: filterByFullList" class="col-md-6">
     <h2>{{currentAnimal.name}} - {{currentAnimal.species}}</h2>
+    <button (click)="editAnimalClick(currentAnimal)" class="btn btn-danger" type="button" name="button">Click to Edit Animal</button>
     <ul>
-      <li>{{currentAnimal.age}}</li>
-      <li>{{currentAnimal.diet}}</li>
-      <li>{{currentAnimal.location}}</li>
-      <li>{{currentAnimal.caretakers}}</li>
-      <li>{{currentAnimal.sex}}</li>
-      <li>{{currentAnimal.likes}}</li>
-      <li>{{currentAnimal.dislikes}}</li>
+      <li><strong>Age:</strong> {{currentAnimal.age}}</li>
+      <li><strong>Diet:</strong> {{currentAnimal.diet}}</li>
+      <li><strong>Location:</strong> {{currentAnimal.location}}</li>
+      <li><strong>Caretakers on Duty:</strong> {{currentAnimal.caretakers}}</li>
+      <li><strong>Gender:</strong> {{currentAnimal.sex}}</li>
+      <li><strong>Likes: </strong>{{currentAnimal.likes}}</li>
+      <li><strong>Dislikes:</strong> {{currentAnimal.dislikes}}</li>
     </ul>
   </div>
 </div>

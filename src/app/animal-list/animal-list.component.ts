@@ -8,6 +8,21 @@ import { Animal } from '../animal.model'
 })
 export class AnimalListComponent implements OnInit {
   @Input() childAnimalList: Animal[];
+  @Output() editSender = new EventEmitter();
+
+  editAnimalClick(animalToEdit: Animal) {
+    this.editSender.emit(animalToEdit);
+  }
+  filterByFullList: string = 'allAnimals';
+
+
+  onChange(optionFromMenu) {
+    this.filterByFullList = optionFromMenu;
+  }
+
+
+
+
   constructor() { }
 
   ngOnInit() {
